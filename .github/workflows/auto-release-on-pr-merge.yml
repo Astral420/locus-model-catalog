@@ -6,9 +6,9 @@ on:
     branches: [main]
     paths:
       - model_catalog.json
-      - model_catalog_v2.json
+      - whisper_catalog.json
+      - embedding_catalog.json
       - script_output.log
-      - script_output_v2.log
 
 jobs:
   create-draft-release:
@@ -56,11 +56,12 @@ jobs:
             **PR:** #${{ github.event.pull_request.number }}
             
             ### Changes
-            - Updated model catalog V1 (GGUF only)
-            - Updated model catalog V2 (GGUF + MLX)
+            - Updated LLM catalog (model_catalog.json)
+            - Updated whisper catalog (whisper_catalog.json)
+            - Updated embedding catalog (embedding_catalog.json)
             - Automated via GitHub Actions workflow
       
-      - name: Upload Release Asset V1
+      - name: Upload Release Asset LLM
         uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -70,12 +71,22 @@ jobs:
             asset_name: model_catalog.json
             asset_content_type: application/json
 
-      - name: Upload Release Asset V2
+      - name: Upload Release Asset Whisper
         uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
             upload_url: ${{ steps.create_release.outputs.upload_url }}
-            asset_path: ./model_catalog_v2.json
-            asset_name: model_catalog_v2.json
+            asset_path: ./whisper_catalog.json
+            asset_name: whisper_catalog.json
+            asset_content_type: application/json
+
+      - name: Upload Release Asset Embedding
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+            upload_url: ${{ steps.create_release.outputs.upload_url }}
+            asset_path: ./embedding_catalog.json
+            asset_name: embedding_catalog.json
             asset_content_type: application/json

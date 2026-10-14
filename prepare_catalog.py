@@ -8,6 +8,8 @@ from collections import defaultdict
 import openai
 import requests
 
+from catalog_helpers import build_quant
+
 # --- Configuration ---
 HF_BASE_API_URL = "https://huggingface.co/api"
 OUTPUT_FILE = "model_catalog.json"
@@ -15,7 +17,7 @@ MODELS_PER_PAGE = 100000  # Reasonable page size
 MAX_PAGES = 1  # Set a reasonable limit to prevent infinite loops
 REQUEST_DELAY = 0.1
 REQUEST_TIMEOUT = 10  # seconds
-priority_devs = ["Menlo", "janhq", "cortexso"]
+priority_devs = ["Qwen", "unsloth", "bartowski", "ggml-org"]
 
 # Tags to look for in the summary metadata
 DESIRED_TAGS = {"text-generation", "conversational", "image-text-to-text"}
@@ -87,6 +89,8 @@ def has_non_chat_name(repo_id: str) -> bool:
     return any(kw in n for kw in NON_CHAT_NAME_KEYWORDS)
 
 BLACKLISTED_DEVELOPERS = {
+    "janhq",  # Jan's own models are not part of the Locus catalog
+    "Menlo",
     "TheBloke",
     "Mungert",  # Temporarily blacklist Diffucoder
     "UmeAiRT",
@@ -94,29 +98,31 @@ BLACKLISTED_DEVELOPERS = {
 }
 
 PINNED_MODELS = [
-    "janhq/Jan-v3.5-4B-gguf",
-    "janhq/Jan-code-4b-gguf",
-    "janhq/Jan-v2-VL-max-gguf",
-    "janhq/Jan-v3-4B-base-instruct-gguf", 
-    "janhq/Jan-v2-VL-med-gguf", 
-    "janhq/Jan-v2-VL-high-gguf", 
-    "unsloth/Qwen3.5-35B-A3B-GGUF",
-    "unsloth/Olmo-3-7B-Instruct-GGUF", 
-    "unsloth/Olmo-3-7B-Think-GGUF", 
-    "unsloth/Olmo-3-32B-Think-GGUF",
-    "Menlo/Jan-nano-128k-gguf"
+    # Always included, even if the discovery pass would not pick them up.
+    "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+    "Qwen/Qwen3-8B-GGUF",
+    "bartowski/Llama-3.2-3B-Instruct-GGUF",
+    "unsloth/gemma-3-4b-it-GGUF",
+    "unsloth/gemma-3-12b-it-GGUF",
+    "ggml-org/gemma-3-1b-it-GGUF",
 ]
 
-client = openai.OpenAI(
-    base_url=os.getenv("BASE_URL"),
-    api_key=os.getenv("API_KEY"),
-)
+# Created lazily: without API_KEY/BASE_URL the run still works, descriptions are just not (re)generated.
+client = None
 
 HF_TOKEN = os.getenv("HF_TOKEN")
 HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"} if HF_TOKEN else {}
 
 
 def summarize_readme_one_liner(text: str) -> str:
+    global client
+    if client is None:
+        if not os.getenv("API_KEY"):
+            raise RuntimeError("API_KEY is not set")
+        client = openai.OpenAI(
+            base_url=os.getenv("BASE_URL"),
+            api_key=os.getenv("API_KEY"),
+        )
     resp = client.chat.completions.create(
         model="minimaxai/minimax-m2.7",
         messages=[
@@ -192,6 +198,10 @@ def process_model_details(repo_id, detail=None, existing_entry=None, is_pinned=F
     downloads = detail.get("downloads", 0)
     createdAt = detail.get("createdAt")
     pipeline_tag = detail.get("pipeline_tag")
+    revision = detail.get("sha")
+    if not revision:
+        print("  -> No commit sha in model detail, skipping")
+        return None
 
     # Check for tool support in chat template
     supports_tools = False
@@ -218,7 +228,7 @@ def process_model_details(repo_id, detail=None, existing_entry=None, is_pinned=F
         if not raw:
             continue
         name = raw.lower()
-        url = f"https://huggingface.co/{repo_id}/resolve/main/{raw}"
+        url = f"https://huggingface.co/{repo_id}/resolve/{revision}/{raw}"
 
         if name.endswith(".gguf"):
             # Skip multipart files individually
@@ -226,24 +236,17 @@ def process_model_details(repo_id, detail=None, existing_entry=None, is_pinned=F
                 print(f"  -> Skipping multi-part file: {raw}")
                 continue
 
+            quant = build_quant(repo_id, revision, sib)
+            if quant is None:
+                print(f"  -> Skipping {raw}: no sha256 reported by the Hub")
+                continue
+
             # Check if it's an mmproj model
             if is_mmproj_file(name):
-                mmproj_models.append(
-                    {
-                        "model_id": raw.rsplit(".gguf", 1)[0],
-                        "path": url,
-                        "file_size": convert_bytes_to_human_readable(sib.get("size")),
-                    }
-                )
+                mmproj_models.append(quant)
             # Check if it's a regular text generation model (not embedding/ocr/speech/reranker)
             elif all(x not in name for x in ("embedding", "ocr", "speech", "reranker", "encoder", "clip")):
-                quants.append(
-                    {
-                        "model_id": raw.rsplit(".gguf", 1)[0],
-                        "path": url,
-                        "file_size": convert_bytes_to_human_readable(sib.get("size")),
-                    }
-                )
+                quants.append(quant)
         elif name == "readme.md":
             readme_url = url
             try:
@@ -292,6 +295,7 @@ def process_model_details(repo_id, detail=None, existing_entry=None, is_pinned=F
         "mmproj_models": mmproj_models,
         "readme": readme_url,
         "description": description,
+        "revision": revision,
     }
 
     # If updating an existing entry, preserve values that don't need to change
@@ -569,6 +573,7 @@ def get_gguf_model_catalog():
                 "mmproj_models",
                 "num_mmproj",
                 "pipeline_tag",
+                "revision",
             ]
             if existing_entry is None:
                 # New entry
@@ -579,6 +584,9 @@ def get_gguf_model_catalog():
                 for key in expected_keys:
                     if key not in existing_entry:
                         missing_keys.append(key)
+                # Entries written before sha256 support get re-fetched once.
+                if any("sha256" not in q for q in existing_entry.get("quants", [])):
+                    missing_keys.append("quants.sha256")
 
                 if missing_keys:
                     needs_processing = True
@@ -734,13 +742,14 @@ def get_gguf_model_catalog():
         mmproj_models = []
         readme_url = existing_entry.get("readme")
 
-        if detail.get("siblings"):
+        revision = detail.get("sha") or existing_entry.get("revision")
+        if detail.get("siblings") and revision:
             for sib in detail.get("siblings", []):
                 raw = sib.get("rfilename")
                 if not raw:
                     continue
                 name = raw.lower()
-                url = f"https://huggingface.co/{repo_id}/resolve/main/{raw}"
+                url = f"https://huggingface.co/{repo_id}/resolve/{revision}/{raw}"
 
                 if name.endswith(".gguf"):
                     # Skip multipart files individually
@@ -748,31 +757,20 @@ def get_gguf_model_catalog():
                         print(f"  -> Skipping multi-part file: {raw}")
                         continue
 
+                    quant = build_quant(repo_id, revision, sib)
+                    if quant is None:
+                        print(f"  -> Skipping {raw}: no sha256 reported by the Hub")
+                        continue
+
                     # Check if it's an mmproj model
                     if is_mmproj_file(name):
-                        mmproj_models.append(
-                            {
-                                "model_id": raw.rsplit(".gguf", 1)[0],
-                                "path": url,
-                                "file_size": convert_bytes_to_human_readable(
-                                    sib.get("size")
-                                ),
-                            }
-                        )
+                        mmproj_models.append(quant)
                     # Check if it's a regular text generation model
                     elif all(
                         x not in name
                         for x in ("embedding", "ocr", "speech", "reranker", "encoder", "clip")
                     ):
-                        quants.append(
-                            {
-                                "model_id": raw.rsplit(".gguf", 1)[0],
-                                "path": url,
-                                "file_size": convert_bytes_to_human_readable(
-                                    sib.get("size")
-                                ),
-                            }
-                        )
+                        quants.append(quant)
                 elif name == "readme.md":
                     readme_url = url
         else:
@@ -827,8 +825,12 @@ def get_gguf_model_catalog():
                 ),
                 "readme": readme_url,
                 "description": description,
+                "revision": revision,
             }
         )
+
+        if not revision:
+            updated_entry.pop("revision", None)  # never write a null revision
 
         existing_map[entry_key] = updated_entry
         added_or_updated += 1

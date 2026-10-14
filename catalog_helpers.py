@@ -1,7 +1,7 @@
 """
 Shared helpers for model catalog scripts.
 
-Used by prepare_catalog_v2.py and fetch_newest_jan_model.py.
+Used by prepare_catalog.py, prepare_whisper_catalog.py and prepare_embedding_catalog.py.
 """
 
 import math
@@ -417,4 +417,39 @@ def process_mlx_model(
         "config": config_url,
         "readme": readme_url,
         "description": description,
+    }
+
+
+# --- Locus additions: verifiable, commit-pinned file entries ---
+
+
+def fetch_repo_detail(repo_id: str) -> dict:
+    """Same call the catalog scripts already make: model detail with per-file blobs (size + LFS sha256)."""
+    resp = requests.get(
+        f"{HF_BASE_API_URL}/models/{repo_id}?blobs=true",
+        timeout=REQUEST_TIMEOUT,
+        headers=HEADERS,
+    )
+    resp.raise_for_status()
+    return resp.json()
+
+
+def build_quant(repo_id: str, revision: str, sibling: dict) -> dict | None:
+    """Build one `quants` entry: Jan's {model_id, path, file_size} plus size_bytes and sha256.
+
+    `path` is pinned to the repo commit instead of `main`, so the sha256 stays valid until the
+    next catalog refresh. Returns None when the Hub reports no LFS sha256 for the file.
+    """
+    raw = sibling.get("rfilename")
+    lfs = sibling.get("lfs") or {}
+    sha256 = lfs.get("sha256")
+    size = lfs.get("size") or sibling.get("size")
+    if not raw or not sha256 or not size:
+        return None
+    return {
+        "model_id": os.path.splitext(raw)[0],
+        "path": f"https://huggingface.co/{repo_id}/resolve/{revision}/{raw}",
+        "file_size": convert_bytes_to_human_readable(size),
+        "size_bytes": int(size),
+        "sha256": sha256,
     }
