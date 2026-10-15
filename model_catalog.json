@@ -2444,162 +2444,6 @@
     "revision": "c099eb48e663fd284577b04978a94ffccb261841"
   },
   {
-    "model_name": "gemma-4-E4B-it-GGUF",
-    "developer": "unsloth",
-    "downloads": 673322,
-    "createdAt": "2026-04-01T14:42:04.000Z",
-    "pipeline_tag": "image-text-to-text",
-    "tools": true,
-    "num_quants": 25,
-    "quants": [
-      {
-        "model_id": "MTP/gemma-4-E4B-it-BF16-MTP",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/MTP/gemma-4-E4B-it-BF16-MTP.gguf",
-        "file_size": "163.8 MB"
-      },
-      {
-        "model_id": "MTP/gemma-4-E4B-it-F16-MTP",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/MTP/gemma-4-E4B-it-F16-MTP.gguf",
-        "file_size": "163.8 MB"
-      },
-      {
-        "model_id": "MTP/gemma-4-E4B-it-Q8_0-MTP",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/MTP/gemma-4-E4B-it-Q8_0-MTP.gguf",
-        "file_size": "94.1 MB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-BF16",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-BF16.gguf",
-        "file_size": "14.0 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-IQ4_NL",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-IQ4_NL.gguf",
-        "file_size": "4.5 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-IQ4_XS",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-IQ4_XS.gguf",
-        "file_size": "4.4 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-Q3_K_M",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q3_K_M.gguf",
-        "file_size": "3.8 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-Q3_K_S",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q3_K_S.gguf",
-        "file_size": "3.6 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-Q4_0",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q4_0.gguf",
-        "file_size": "4.5 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-Q4_1",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q4_1.gguf",
-        "file_size": "4.7 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-Q4_K_M",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q4_K_M.gguf",
-        "file_size": "4.6 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-Q4_K_S",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q4_K_S.gguf",
-        "file_size": "4.5 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-Q5_K_M",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q5_K_M.gguf",
-        "file_size": "5.1 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-Q5_K_S",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q5_K_S.gguf",
-        "file_size": "5.0 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-Q6_K",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q6_K.gguf",
-        "file_size": "6.6 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-Q8_0",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q8_0.gguf",
-        "file_size": "7.6 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-UD-IQ2_M",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-UD-IQ2_M.gguf",
-        "file_size": "3.3 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-UD-IQ3_XXS",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-UD-IQ3_XXS.gguf",
-        "file_size": "3.5 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-UD-Q2_K_XL",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-UD-Q2_K_XL.gguf",
-        "file_size": "3.5 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-UD-Q3_K_XL",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-UD-Q3_K_XL.gguf",
-        "file_size": "4.3 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-UD-Q4_K_XL",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-UD-Q4_K_XL.gguf",
-        "file_size": "4.8 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-UD-Q5_K_XL",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-UD-Q5_K_XL.gguf",
-        "file_size": "6.2 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-UD-Q6_K_XL",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-UD-Q6_K_XL.gguf",
-        "file_size": "6.9 GB"
-      },
-      {
-        "model_id": "gemma-4-E4B-it-UD-Q8_K_XL",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-UD-Q8_K_XL.gguf",
-        "file_size": "8.1 GB"
-      },
-      {
-        "model_id": "mtp-gemma-4-E4B-it",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/mtp-gemma-4-E4B-it.gguf",
-        "file_size": "94.1 MB"
-      }
-    ],
-    "num_mmproj": 3,
-    "mmproj_models": [
-      {
-        "model_id": "mmproj-BF16",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/mmproj-BF16.gguf",
-        "file_size": "945.6 MB"
-      },
-      {
-        "model_id": "mmproj-F16",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/mmproj-F16.gguf",
-        "file_size": "944.5 MB"
-      },
-      {
-        "model_id": "mmproj-F32",
-        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/mmproj-F32.gguf",
-        "file_size": "1.8 GB"
-      }
-    ],
-    "readme": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/README.md",
-    "description": "Gemma 4 is a family of open multimodal AI models by Google DeepMind supporting text, images, audio, and video with reasoning capabilities, available in sizes from 2B to 31B parameters."
-  },
-  {
     "model_name": "gemma-4-E2B-it-GGUF",
     "developer": "unsloth",
     "downloads": 668726,
@@ -2883,6 +2727,219 @@
     "description": "Google's multimodal AI models (text/image/audio) with quantization-aware training for memory-efficient deployment."
   },
   {
+    "model_name": "gemma-4-E4B-it-GGUF",
+    "developer": "unsloth",
+    "downloads": 590387,
+    "createdAt": "2026-04-01T14:42:04.000Z",
+    "pipeline_tag": "image-text-to-text",
+    "tools": true,
+    "num_quants": 25,
+    "quants": [
+      {
+        "model_id": "MTP/mtp-gemma-4-E4B-it-BF16",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/MTP/mtp-gemma-4-E4B-it-BF16.gguf",
+        "file_size": "163.8 MB",
+        "size_bytes": 171766848,
+        "sha256": "909b31e9e0a4919c936f09b99b3562d663187d6c142abe3e6656610720f9b3e2"
+      },
+      {
+        "model_id": "MTP/mtp-gemma-4-E4B-it-F16",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/MTP/mtp-gemma-4-E4B-it-F16.gguf",
+        "file_size": "163.8 MB",
+        "size_bytes": 171766848,
+        "sha256": "16f0fad416a6ce65b28688daa1d39f4b11af5427a4478beb1d4f3adf7b5ed2bf"
+      },
+      {
+        "model_id": "MTP/mtp-gemma-4-E4B-it-Q8_0",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/MTP/mtp-gemma-4-E4B-it-Q8_0.gguf",
+        "file_size": "94.1 MB",
+        "size_bytes": 98653248,
+        "sha256": "b6a723115efa510d3b3215db1e26790dae84cd08c2134a764f3d194f1f0c3376"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-BF16",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-BF16.gguf",
+        "file_size": "14.0 GB",
+        "size_bytes": 15053097856,
+        "sha256": "38e0dba6818d18e2b41062c7b3b9083dcfddc44767078c415ff7e13661911ba5"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-IQ4_NL",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-IQ4_NL.gguf",
+        "file_size": "4.5 GB",
+        "size_bytes": 4835839104,
+        "sha256": "fe389d0020e4ba26a502b73970fe00f6a8bd6012cec6987d36ff4ffd0b301750"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-IQ4_XS",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-IQ4_XS.gguf",
+        "file_size": "4.4 GB",
+        "size_bytes": 4715416704,
+        "sha256": "0847f7300471e9a61abaeb46b45b3d61e393af8fa6d6aa70c563623773670dd9"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-Q3_K_M",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-Q3_K_M.gguf",
+        "file_size": "3.8 GB",
+        "size_bytes": 4058137728,
+        "sha256": "0980898d0e7d9c75cea05141bf4010393312101ef6cf5b31f8197e0de18655f4"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-Q3_K_S",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-Q3_K_S.gguf",
+        "file_size": "3.6 GB",
+        "size_bytes": 3862379648,
+        "sha256": "fe6e02cdcd5f3287b4ac146ea68ea2c73363bf935159aa254a9d280a4ffe31aa"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-Q4_0",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-Q4_0.gguf",
+        "file_size": "4.5 GB",
+        "size_bytes": 4836002944,
+        "sha256": "4a403d2e4d80281063e4f517b1c061ded8476b4011a4fc2ba7dbff707075547e"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-Q4_1",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-Q4_1.gguf",
+        "file_size": "4.7 GB",
+        "size_bytes": 5074390144,
+        "sha256": "430685a687edf70c4fdb1158aa92c34dbb38e1230f674849f198a954cc748405"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-Q4_K_M",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-Q4_K_M.gguf",
+        "file_size": "4.6 GB",
+        "size_bytes": 4977171584,
+        "sha256": "85a896a047553e842f25297ee5b031d64ff30147d9c4af17b1e4b394cd1fab87"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-Q4_K_S",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-Q4_K_S.gguf",
+        "file_size": "4.5 GB",
+        "size_bytes": 4844850304,
+        "sha256": "0fdbd6df44e505481a0636fe3160d230d6de2ecf0f8a20f06a5c64adef0cae00"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-Q5_K_M",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-Q5_K_M.gguf",
+        "file_size": "5.1 GB",
+        "size_bytes": 5481798784,
+        "sha256": "a5d6e634db151368d2caa4270fd32ab604d96c2d1291950586989f46d8e17d36"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-Q5_K_S",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-Q5_K_S.gguf",
+        "file_size": "5.0 GB",
+        "size_bytes": 5404855424,
+        "sha256": "f1991026c630086164a436c88f09b1a0cfe2eae6cd312ac4697be2b1567989dc"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-Q6_K",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-Q6_K.gguf",
+        "file_size": "6.6 GB",
+        "size_bytes": 7074929792,
+        "sha256": "fd83f3ef44d22e00ff0f638753dde9a66a83e8ccf79c11024f47d383c489531b"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-Q8_0",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-Q8_0.gguf",
+        "file_size": "7.6 GB",
+        "size_bytes": 8192953472,
+        "sha256": "f8854aa4480df62585a279e7ca0a881554fc18a41c59c4f62642d16a2ae47012"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-UD-IQ2_M",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-UD-IQ2_M.gguf",
+        "file_size": "3.3 GB",
+        "size_bytes": 3545083008,
+        "sha256": "ae7c1bd7867d2037c3d5b281c151319380a00f9f9f8de2cc8b507aef5d6a31b9"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-UD-IQ3_XXS",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-UD-IQ3_XXS.gguf",
+        "file_size": "3.5 GB",
+        "size_bytes": 3717115008,
+        "sha256": "dd0b5b2f3ba8b4cbeb35154484fc67729183c8f24f53e43319d806ec9fffc6a7"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-UD-Q2_K_XL",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-UD-Q2_K_XL.gguf",
+        "file_size": "3.5 GB",
+        "size_bytes": 3757419648,
+        "sha256": "cc92186419be169e992a1df01978828a0d4cf3a5962379ff403c8d55f6faff78"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-UD-Q3_K_XL",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-UD-Q3_K_XL.gguf",
+        "file_size": "4.3 GB",
+        "size_bytes": 4588440704,
+        "sha256": "7558880ee42b79ab732481bd7250e85c41d9ef044b22634b8a912eb184224009"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-UD-Q4_K_XL",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-UD-Q4_K_XL.gguf",
+        "file_size": "4.8 GB",
+        "size_bytes": 5126306944,
+        "sha256": "3cf61de12daa015ee0f7b68e7b7c541405bf220e1e942bad8b47cab827d7df80"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-UD-Q5_K_XL",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-UD-Q5_K_XL.gguf",
+        "file_size": "6.2 GB",
+        "size_bytes": 6656154752,
+        "sha256": "9940a3eedd3dca186b09b1586006dafb1cc408c3fc53e73c313e48c0e3267825"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-UD-Q6_K_XL",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-UD-Q6_K_XL.gguf",
+        "file_size": "6.9 GB",
+        "size_bytes": 7457762432,
+        "sha256": "17b9c459b28b420ce20d75bcfc329db4fac1343792a964c3ae2e2680ce768932"
+      },
+      {
+        "model_id": "gemma-4-E4B-it-UD-Q8_K_XL",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/gemma-4-E4B-it-UD-Q8_K_XL.gguf",
+        "file_size": "8.1 GB",
+        "size_bytes": 8711507072,
+        "sha256": "21a5e0f214eb1055bc34602e62fe46254756ee3f3698abab6fe0607203359dff"
+      },
+      {
+        "model_id": "mtp-gemma-4-E4B-it",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/mtp-gemma-4-E4B-it.gguf",
+        "file_size": "94.1 MB",
+        "size_bytes": 98653248,
+        "sha256": "b6a723115efa510d3b3215db1e26790dae84cd08c2134a764f3d194f1f0c3376"
+      }
+    ],
+    "num_mmproj": 3,
+    "mmproj_models": [
+      {
+        "model_id": "mmproj-BF16",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/mmproj-BF16.gguf",
+        "file_size": "945.6 MB",
+        "size_bytes": 991552320,
+        "sha256": "ee01cba03fd9c71ea2ea722225d24a84f72e7197714367e550ef705ef8851bc6"
+      },
+      {
+        "model_id": "mmproj-F16",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/mmproj-F16.gguf",
+        "file_size": "944.5 MB",
+        "size_bytes": 990372672,
+        "sha256": "ddf46c21d7078e95338cfc22306b19b276a29a5ad089023449dd54d4b6170a51"
+      },
+      {
+        "model_id": "mmproj-F32",
+        "path": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/mmproj-F32.gguf",
+        "file_size": "1.8 GB",
+        "size_bytes": 1912464192,
+        "sha256": "343cdea7775835ebdd1caa6c42ec3ec3e711d082835c72253d4e87c4b7e303d0"
+      }
+    ],
+    "readme": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/bfc15c382204943c3a8fff0c750b94ae2364d7a3/README.md",
+    "description": "Gemma 4 is a family of open multimodal AI models by Google DeepMind supporting text, images, audio, and video with reasoning capabilities, available in sizes from 2B to 31B parameters.",
+    "revision": "bfc15c382204943c3a8fff0c750b94ae2364d7a3"
+  },
+  {
     "model_name": "Qwen3.6-27B-GGUF",
     "developer": "unsloth",
     "downloads": 588371,
@@ -3019,6 +3076,57 @@
     "description": "Qwen3.6-27B is a 27B-parameter open-weight vision-language model optimized for agentic coding with 262k context length, thinking mode, and tool calling support, deployable via SGLang, vLLM, or Hugging Face Transformers."
   },
   {
+    "model_name": "Qwen3-4B-GGUF",
+    "developer": "Qwen",
+    "downloads": 539429,
+    "createdAt": "2025-05-05T08:48:20.000Z",
+    "pipeline_tag": "text-generation",
+    "tools": true,
+    "num_quants": 5,
+    "quants": [
+      {
+        "model_id": "Qwen3-4B-Q4_K_M",
+        "path": "https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/bc640142c66e1fdd12af0bd68f40445458f3869b/Qwen3-4B-Q4_K_M.gguf",
+        "file_size": "2.3 GB",
+        "size_bytes": 2497280256,
+        "sha256": "7485fe6f11af29433bc51cab58009521f205840f5b4ae3a32fa7f92e8534fdf5"
+      },
+      {
+        "model_id": "Qwen3-4B-Q5_0",
+        "path": "https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/bc640142c66e1fdd12af0bd68f40445458f3869b/Qwen3-4B-Q5_0.gguf",
+        "file_size": "2.6 GB",
+        "size_bytes": 2823710976,
+        "sha256": "7f99c1aeefbcf991f04f67104e3d6f7b899e95170359ce081b0618d4f11878f5"
+      },
+      {
+        "model_id": "Qwen3-4B-Q5_K_M",
+        "path": "https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/bc640142c66e1fdd12af0bd68f40445458f3869b/Qwen3-4B-Q5_K_M.gguf",
+        "file_size": "2.7 GB",
+        "size_bytes": 2889513184,
+        "sha256": "aca596860e8cb40af6539e3f2ea40df305f42515deac56d49c08d39a02e6533f"
+      },
+      {
+        "model_id": "Qwen3-4B-Q6_K",
+        "path": "https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/bc640142c66e1fdd12af0bd68f40445458f3869b/Qwen3-4B-Q6_K.gguf",
+        "file_size": "3.1 GB",
+        "size_bytes": 3306260704,
+        "sha256": "8a08533841623c2a689763b9318d8e27b3e052ad5b38015d4be4c04fa96f68a3"
+      },
+      {
+        "model_id": "Qwen3-4B-Q8_0",
+        "path": "https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/bc640142c66e1fdd12af0bd68f40445458f3869b/Qwen3-4B-Q8_0.gguf",
+        "file_size": "4.0 GB",
+        "size_bytes": 4280404704,
+        "sha256": "8c2f07f26af9747e41988551106f149b03eb9b5cb6df636027b6bf6278473300"
+      }
+    ],
+    "num_mmproj": 0,
+    "mmproj_models": [],
+    "readme": "https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/bc640142c66e1fdd12af0bd68f40445458f3869b/README.md",
+    "description": "Qwen3-4B-GGUF is a quantized (q4-q8) 4B parameter text-generation model with switchable thinking/non-thinking modes, supporting 32K-131K context lengths.",
+    "revision": "bc640142c66e1fdd12af0bd68f40445458f3869b"
+  },
+  {
     "model_name": "gpt-oss-20b-GGUF",
     "developer": "unsloth",
     "downloads": 512904,
@@ -3145,46 +3253,6 @@
     "readme": "https://huggingface.co/unsloth/gpt-oss-20b-GGUF/resolve/d449b42d93e1c2c7bda5312f5c25c8fb91dfa9b4/README.md",
     "description": "OpenAI's 20B open-weight model with MXFP4 quantization for low-latency, local, and agentic use cases under Apache 2.0 license.",
     "revision": "d449b42d93e1c2c7bda5312f5c25c8fb91dfa9b4"
-  },
-  {
-    "model_name": "Qwen3-4B-GGUF",
-    "developer": "Qwen",
-    "downloads": 412232,
-    "createdAt": "2025-05-05T08:48:20.000Z",
-    "pipeline_tag": "text-generation",
-    "tools": true,
-    "num_quants": 5,
-    "quants": [
-      {
-        "model_id": "Qwen3-4B-Q4_K_M",
-        "path": "https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/main/Qwen3-4B-Q4_K_M.gguf",
-        "file_size": "2.3 GB"
-      },
-      {
-        "model_id": "Qwen3-4B-Q5_0",
-        "path": "https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/main/Qwen3-4B-Q5_0.gguf",
-        "file_size": "2.6 GB"
-      },
-      {
-        "model_id": "Qwen3-4B-Q5_K_M",
-        "path": "https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/main/Qwen3-4B-Q5_K_M.gguf",
-        "file_size": "2.7 GB"
-      },
-      {
-        "model_id": "Qwen3-4B-Q6_K",
-        "path": "https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/main/Qwen3-4B-Q6_K.gguf",
-        "file_size": "3.1 GB"
-      },
-      {
-        "model_id": "Qwen3-4B-Q8_0",
-        "path": "https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/main/Qwen3-4B-Q8_0.gguf",
-        "file_size": "4.0 GB"
-      }
-    ],
-    "num_mmproj": 0,
-    "mmproj_models": [],
-    "readme": "https://huggingface.co/Qwen/Qwen3-4B-GGUF/resolve/main/README.md",
-    "description": "Qwen3-4B-GGUF is a quantized (q4-q8) 4B parameter text-generation model with switchable thinking/non-thinking modes, supporting 32K-131K context lengths."
   },
   {
     "model_name": "gemma-2-2b-it-GGUF",
@@ -7655,6 +7723,85 @@
     "description": "Step 3.7 Flash is a 198B-parameter sparse MoE vision-language model by StepFun for high-throughput multimodal agentic workflows."
   },
   {
+    "model_name": "Qwen2.5-Coder-3B-Instruct-GGUF",
+    "developer": "Qwen",
+    "downloads": 102383,
+    "createdAt": "2024-11-09T12:46:15.000Z",
+    "pipeline_tag": "text-generation",
+    "tools": true,
+    "num_quants": 9,
+    "quants": [
+      {
+        "model_id": "qwen2.5-coder-3b-instruct-fp16",
+        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/f74adce6aa16316c625447af059dbebe4983757c/qwen2.5-coder-3b-instruct-fp16.gguf",
+        "file_size": "6.3 GB",
+        "size_bytes": 6800646592,
+        "sha256": "ad287741f0acaa56a59e8205ca1616acee9baef6d2f3bf63578ed969491d9659"
+      },
+      {
+        "model_id": "qwen2.5-coder-3b-instruct-q2_k",
+        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/f74adce6aa16316c625447af059dbebe4983757c/qwen2.5-coder-3b-instruct-q2_k.gguf",
+        "file_size": "1.3 GB",
+        "size_bytes": 1376856512,
+        "sha256": "cf5862615f10e7d19131ec8c3223c51ac43b63a66a0607b44db2b6943144d607"
+      },
+      {
+        "model_id": "qwen2.5-coder-3b-instruct-q3_k_m",
+        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/f74adce6aa16316c625447af059dbebe4983757c/qwen2.5-coder-3b-instruct-q3_k_m.gguf",
+        "file_size": "1.6 GB",
+        "size_bytes": 1724178880,
+        "sha256": "fc3937db7dda9d9ef68ce1f63b5a84ac850ec3c07578461d645e5a88509348e3"
+      },
+      {
+        "model_id": "qwen2.5-coder-3b-instruct-q4_0",
+        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/f74adce6aa16316c625447af059dbebe4983757c/qwen2.5-coder-3b-instruct-q4_0.gguf",
+        "file_size": "1.9 GB",
+        "size_bytes": 1997879744,
+        "sha256": "282085f05511706c7b59b32ccabfc452f214771076298c29183e595c576417e0"
+      },
+      {
+        "model_id": "qwen2.5-coder-3b-instruct-q4_k_m",
+        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/f74adce6aa16316c625447af059dbebe4983757c/qwen2.5-coder-3b-instruct-q4_k_m.gguf",
+        "file_size": "2.0 GB",
+        "size_bytes": 2104932800,
+        "sha256": "724fb256bec1ff062b2f65e4569e871ad2e95ab2a3989723d1769c54294730b7"
+      },
+      {
+        "model_id": "qwen2.5-coder-3b-instruct-q5_0",
+        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/f74adce6aa16316c625447af059dbebe4983757c/qwen2.5-coder-3b-instruct-q5_0.gguf",
+        "file_size": "2.2 GB",
+        "size_bytes": 2383591872,
+        "sha256": "cce5da4aaf76b2d49cb71172688ae7838d6757b8ad8bca4785d9d2c2ba4f3259"
+      },
+      {
+        "model_id": "qwen2.5-coder-3b-instruct-q5_k_m",
+        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/f74adce6aa16316c625447af059dbebe4983757c/qwen2.5-coder-3b-instruct-q5_k_m.gguf",
+        "file_size": "2.3 GB",
+        "size_bytes": 2438740416,
+        "sha256": "eb863f2a1a9b67e33bbf2dad98ea09c03b71c8052aeb4835171cf6f7a7a12db4"
+      },
+      {
+        "model_id": "qwen2.5-coder-3b-instruct-q6_k",
+        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/f74adce6aa16316c625447af059dbebe4983757c/qwen2.5-coder-3b-instruct-q6_k.gguf",
+        "file_size": "2.6 GB",
+        "size_bytes": 2793411008,
+        "sha256": "72491febb8b149abacfd15a5e94e354b5fb6bda6baffc292f9aec270b94596c8"
+      },
+      {
+        "model_id": "qwen2.5-coder-3b-instruct-q8_0",
+        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/f74adce6aa16316c625447af059dbebe4983757c/qwen2.5-coder-3b-instruct-q8_0.gguf",
+        "file_size": "3.4 GB",
+        "size_bytes": 3616088512,
+        "sha256": "f648c25dfd5a0870c4ad76724a745124ab5667ff97b664534fcbe46089b75ab8"
+      }
+    ],
+    "num_mmproj": 0,
+    "mmproj_models": [],
+    "readme": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/f74adce6aa16316c625447af059dbebe4983757c/README.md",
+    "description": "This repository provides the instruction-tuned 3B Qwen2.5-Coder model in GGUF format, optimized for code generation, reasoning, and fixing with 3.09B parameters and full 32,768 token context length.",
+    "revision": "f74adce6aa16316c625447af059dbebe4983757c"
+  },
+  {
     "model_name": "Qwen2.5-Coder-32B-Instruct-GGUF",
     "developer": "Qwen",
     "downloads": 101722,
@@ -8818,66 +8965,6 @@
     ],
     "readme": "https://huggingface.co/bartowski/google_gemma-4-E4B-it-GGUF/resolve/main/README.md",
     "description": "Google's Gemma 4 edge-optimized instruction-tuned model, designed for efficient on-device inference."
-  },
-  {
-    "model_name": "Qwen2.5-Coder-3B-Instruct-GGUF",
-    "developer": "Qwen",
-    "downloads": 74960,
-    "createdAt": "2024-11-09T12:46:15.000Z",
-    "pipeline_tag": "text-generation",
-    "tools": true,
-    "num_quants": 9,
-    "quants": [
-      {
-        "model_id": "qwen2.5-coder-3b-instruct-fp16",
-        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/main/qwen2.5-coder-3b-instruct-fp16.gguf",
-        "file_size": "6.3 GB"
-      },
-      {
-        "model_id": "qwen2.5-coder-3b-instruct-q2_k",
-        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/main/qwen2.5-coder-3b-instruct-q2_k.gguf",
-        "file_size": "1.3 GB"
-      },
-      {
-        "model_id": "qwen2.5-coder-3b-instruct-q3_k_m",
-        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/main/qwen2.5-coder-3b-instruct-q3_k_m.gguf",
-        "file_size": "1.6 GB"
-      },
-      {
-        "model_id": "qwen2.5-coder-3b-instruct-q4_0",
-        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/main/qwen2.5-coder-3b-instruct-q4_0.gguf",
-        "file_size": "1.9 GB"
-      },
-      {
-        "model_id": "qwen2.5-coder-3b-instruct-q4_k_m",
-        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/main/qwen2.5-coder-3b-instruct-q4_k_m.gguf",
-        "file_size": "2.0 GB"
-      },
-      {
-        "model_id": "qwen2.5-coder-3b-instruct-q5_0",
-        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/main/qwen2.5-coder-3b-instruct-q5_0.gguf",
-        "file_size": "2.2 GB"
-      },
-      {
-        "model_id": "qwen2.5-coder-3b-instruct-q5_k_m",
-        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/main/qwen2.5-coder-3b-instruct-q5_k_m.gguf",
-        "file_size": "2.3 GB"
-      },
-      {
-        "model_id": "qwen2.5-coder-3b-instruct-q6_k",
-        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/main/qwen2.5-coder-3b-instruct-q6_k.gguf",
-        "file_size": "2.6 GB"
-      },
-      {
-        "model_id": "qwen2.5-coder-3b-instruct-q8_0",
-        "path": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/main/qwen2.5-coder-3b-instruct-q8_0.gguf",
-        "file_size": "3.4 GB"
-      }
-    ],
-    "num_mmproj": 0,
-    "mmproj_models": [],
-    "readme": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/main/README.md",
-    "description": "This repository provides the instruction-tuned 3B Qwen2.5-Coder model in GGUF format, optimized for code generation, reasoning, and fixing with 3.09B parameters and full 32,768 token context length."
   },
   {
     "model_name": "North-Mini-Code-1.0-GGUF",
@@ -49473,7 +49560,7 @@
     "createdAt": "2026-10-07T07:25:49.000Z",
     "pipeline_tag": "text-generation",
     "tools": true,
-    "num_quants": 2,
+    "num_quants": 1,
     "quants": [
       {
         "model_id": "vision/GLM-5.3-Flash-vocab",
@@ -49481,7 +49568,10 @@
         "file_size": "9.0 MB",
         "size_bytes": 9426880,
         "sha256": "8f53cb1bd2e631c14ef413e3284735d9e53f3c508d07a6f609e705b487105912"
-      },
+      }
+    ],
+    "num_mmproj": 1,
+    "mmproj_models": [
       {
         "model_id": "vision/mmproj-GLM-5.3-Flash-F16",
         "path": "https://huggingface.co/peasantsmith/GLM-5.3-Flash-Maya-GGUF/resolve/f16ee4ba50d8fd2bb726ea1862ca6ca14ba188da/vision/mmproj-GLM-5.3-Flash-F16.gguf",
@@ -49490,8 +49580,6 @@
         "sha256": "3627575df16bd152db0f3fd7e488d270b33f3a9e6c7fa3b1b8ac381faafde882"
       }
     ],
-    "num_mmproj": 0,
-    "mmproj_models": [],
     "readme": "https://huggingface.co/peasantsmith/GLM-5.3-Flash-Maya-GGUF/resolve/f16ee4ba50d8fd2bb726ea1862ca6ca14ba188da/README.md",
     "description": "",
     "revision": "f16ee4ba50d8fd2bb726ea1862ca6ca14ba188da"
@@ -49627,7 +49715,7 @@
     "createdAt": "2026-10-06T04:24:37.000Z",
     "pipeline_tag": "image-text-to-text",
     "tools": true,
-    "num_quants": 11,
+    "num_quants": 10,
     "quants": [
       {
         "model_id": "GGUF/Qwen3.8-27B-Coder390-EfficientThink-Q2LynnStyle-MTP",
@@ -49686,13 +49774,6 @@
         "sha256": "b24e8c5fe3f2b282cce841400c740fcaca48afcdcf9e991f7bbe9a59a78cabfe"
       },
       {
-        "model_id": "GGUF/mmproj-Qwen3.8-27B-Q8_0",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astra-Grok4.7-DSV4Pro-K3-SFT-RLOO-GGUF-NInfer/resolve/93e4241f530d9c5389a6c879a812a7fd03df461a/GGUF/mmproj-Qwen3.8-27B-Q8_0.gguf",
-        "file_size": "600.1 MB",
-        "size_bytes": 629247008,
-        "sha256": "cae9799dc9196449b0d83f716e64af89d5cf65147510462e5a629a2aa23adb32"
-      },
-      {
         "model_id": "GGUF/mtp-Qwen3.8-27B-Coder390-EfficientThink-Q8_0",
         "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astra-Grok4.7-DSV4Pro-K3-SFT-RLOO-GGUF-NInfer/resolve/93e4241f530d9c5389a6c879a812a7fd03df461a/GGUF/mtp-Qwen3.8-27B-Coder390-EfficientThink-Q8_0.gguf",
         "file_size": "2.9 GB",
@@ -49707,8 +49788,16 @@
         "sha256": "be0924f24bd82c05b28da0c1d803ef29c1961f60bf9e978a16ffe746ee2adcf1"
       }
     ],
-    "num_mmproj": 0,
-    "mmproj_models": [],
+    "num_mmproj": 1,
+    "mmproj_models": [
+      {
+        "model_id": "GGUF/mmproj-Qwen3.8-27B-Q8_0",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astra-Grok4.7-DSV4Pro-K3-SFT-RLOO-GGUF-NInfer/resolve/93e4241f530d9c5389a6c879a812a7fd03df461a/GGUF/mmproj-Qwen3.8-27B-Q8_0.gguf",
+        "file_size": "600.1 MB",
+        "size_bytes": 629247008,
+        "sha256": "cae9799dc9196449b0d83f716e64af89d5cf65147510462e5a629a2aa23adb32"
+      }
+    ],
     "readme": "https://huggingface.co/nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astra-Grok4.7-DSV4Pro-K3-SFT-RLOO-GGUF-NInfer/resolve/93e4241f530d9c5389a6c879a812a7fd03df461a/README.md",
     "description": "",
     "revision": "93e4241f530d9c5389a6c879a812a7fd03df461a"
@@ -49846,28 +49935,14 @@
     "createdAt": "2026-05-03T00:33:24.000Z",
     "pipeline_tag": "text-to-video",
     "tools": true,
-    "num_quants": 4,
+    "num_quants": 2,
     "quants": [
-      {
-        "model_id": "prompt_enhancer/mmproj-BF16",
-        "path": "https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/65587bbb38c700622f9434a16e732c8b280c115e/prompt_enhancer/mmproj-BF16.gguf",
-        "file_size": "879.0 MB",
-        "size_bytes": 921705024,
-        "sha256": "853698ce7aa6c7ba732478bad280240969ddf7b0fcbf93900046f63903a83383"
-      },
       {
         "model_id": "prompt_enhancer/sulphur_prompt_enhancer_model-q8_0",
         "path": "https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/65587bbb38c700622f9434a16e732c8b280c115e/prompt_enhancer/sulphur_prompt_enhancer_model-q8_0.gguf",
         "file_size": "8.9 GB",
         "size_bytes": 9527501184,
         "sha256": "6d424c85d5ecc6945af90295b7a68f9b141ef412ae1a2acd1f7b778bd65fa78c"
-      },
-      {
-        "model_id": "prompt_enhancer_uncensored/mmproj-prompt_enhancer_uncensored",
-        "path": "https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/65587bbb38c700622f9434a16e732c8b280c115e/prompt_enhancer_uncensored/mmproj-prompt_enhancer_uncensored.gguf",
-        "file_size": "879.0 MB",
-        "size_bytes": 921704384,
-        "sha256": "6af8cbc85b7e25459e687da3674c3e5a46c4eaaf6b8fabb3f4447ebf6373a888"
       },
       {
         "model_id": "prompt_enhancer_uncensored/prompt_enhancer_uncensored-q8_0",
@@ -49877,8 +49952,23 @@
         "sha256": "65332fa56d7ec9905aa47539515f7b059e4f8fb2de8a0da4d2cebcd6c8b7fd2f"
       }
     ],
-    "num_mmproj": 0,
-    "mmproj_models": [],
+    "num_mmproj": 2,
+    "mmproj_models": [
+      {
+        "model_id": "prompt_enhancer/mmproj-BF16",
+        "path": "https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/65587bbb38c700622f9434a16e732c8b280c115e/prompt_enhancer/mmproj-BF16.gguf",
+        "file_size": "879.0 MB",
+        "size_bytes": 921705024,
+        "sha256": "853698ce7aa6c7ba732478bad280240969ddf7b0fcbf93900046f63903a83383"
+      },
+      {
+        "model_id": "prompt_enhancer_uncensored/mmproj-prompt_enhancer_uncensored",
+        "path": "https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/65587bbb38c700622f9434a16e732c8b280c115e/prompt_enhancer_uncensored/mmproj-prompt_enhancer_uncensored.gguf",
+        "file_size": "879.0 MB",
+        "size_bytes": 921704384,
+        "sha256": "6af8cbc85b7e25459e687da3674c3e5a46c4eaaf6b8fabb3f4447ebf6373a888"
+      }
+    ],
     "readme": "https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/65587bbb38c700622f9434a16e732c8b280c115e/README.md",
     "description": "An uncensored video generation model based on LTX 2.3 supporting text-to-video and image-to-video generation with an optional prompt enhancer.",
     "revision": "65587bbb38c700622f9434a16e732c8b280c115e"
@@ -49960,7 +50050,7 @@
     "createdAt": "2026-10-04T10:44:11.000Z",
     "pipeline_tag": "image-text-to-text",
     "tools": true,
-    "num_quants": 10,
+    "num_quants": 9,
     "quants": [
       {
         "model_id": "GGUF/Qwen3.8-27B-Coder390-EfficientThink-Q2LynnStyle-MTP",
@@ -50019,13 +50109,6 @@
         "sha256": "b24e8c5fe3f2b282cce841400c740fcaca48afcdcf9e991f7bbe9a59a78cabfe"
       },
       {
-        "model_id": "GGUF/mmproj-Qwen3.8-27B-Q8_0",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astra-Grok4.7-DSV4Pro-K3-SFT-RLOO-MTP-DFlash2/resolve/0bd71460f09b66520220b22372e846d2a84f1fba/GGUF/mmproj-Qwen3.8-27B-Q8_0.gguf",
-        "file_size": "600.1 MB",
-        "size_bytes": 629247008,
-        "sha256": "cae9799dc9196449b0d83f716e64af89d5cf65147510462e5a629a2aa23adb32"
-      },
-      {
         "model_id": "GGUF/mtp-Qwen3.8-27B-Coder390-EfficientThink-Q8_0",
         "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astra-Grok4.7-DSV4Pro-K3-SFT-RLOO-MTP-DFlash2/resolve/0bd71460f09b66520220b22372e846d2a84f1fba/GGUF/mtp-Qwen3.8-27B-Coder390-EfficientThink-Q8_0.gguf",
         "file_size": "2.9 GB",
@@ -50033,8 +50116,16 @@
         "sha256": "50a030e852289eed86065e2e2de57d89241174e99faa2c1c2f06c29c270789ee"
       }
     ],
-    "num_mmproj": 0,
-    "mmproj_models": [],
+    "num_mmproj": 1,
+    "mmproj_models": [
+      {
+        "model_id": "GGUF/mmproj-Qwen3.8-27B-Q8_0",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astra-Grok4.7-DSV4Pro-K3-SFT-RLOO-MTP-DFlash2/resolve/0bd71460f09b66520220b22372e846d2a84f1fba/GGUF/mmproj-Qwen3.8-27B-Q8_0.gguf",
+        "file_size": "600.1 MB",
+        "size_bytes": 629247008,
+        "sha256": "cae9799dc9196449b0d83f716e64af89d5cf65147510462e5a629a2aa23adb32"
+      }
+    ],
     "readme": "https://huggingface.co/nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astra-Grok4.7-DSV4Pro-K3-SFT-RLOO-MTP-DFlash2/resolve/0bd71460f09b66520220b22372e846d2a84f1fba/README.md",
     "description": "",
     "revision": "0bd71460f09b66520220b22372e846d2a84f1fba"
@@ -51244,7 +51335,7 @@
     "createdAt": "2026-09-03T11:53:08.000Z",
     "pipeline_tag": null,
     "tools": true,
-    "num_quants": 40,
+    "num_quants": 30,
     "quants": [
       {
         "model_id": "Q2-LynnStyle/Qwen3.8-27B-EfficientThink-SimPO-Q2-LynnStyle",
@@ -51266,13 +51357,6 @@
         "file_size": "1.9 GB",
         "size_bytes": 2056414720,
         "sha256": "1086ea5d44e9d7b3ee1978ce322c01f96d9c1086bd5e73d89397be7a2af1335a"
-      },
-      {
-        "model_id": "Q2-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q2-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
-        "file_size": "498.1 MB",
-        "size_bytes": 522293024,
-        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
       },
       {
         "model_id": "Q2-LynnStyle/mtp-Qwen3.8-27B-Q4_0",
@@ -51310,20 +51394,6 @@
         "sha256": "1086ea5d44e9d7b3ee1978ce322c01f96d9c1086bd5e73d89397be7a2af1335a"
       },
       {
-        "model_id": "Q3-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q3-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
-        "file_size": "498.1 MB",
-        "size_bytes": 522293024,
-        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
-      },
-      {
-        "model_id": "Q3-LynnStyle/mmproj-Qwen3.8-27B-Q6_K",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q3-LynnStyle/mmproj-Qwen3.8-27B-Q6_K.gguf",
-        "file_size": "589.7 MB",
-        "size_bytes": 618390560,
-        "sha256": "4b83ea6e065484a8188288513fe15d5a862e01fa6d32c83fa66655b1cbfdcb77"
-      },
-      {
         "model_id": "Q3-LynnStyle/mtp-Qwen3.8-27B-Q4_0",
         "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q3-LynnStyle/mtp-Qwen3.8-27B-Q4_0.gguf",
         "file_size": "1.6 GB",
@@ -51357,20 +51427,6 @@
         "file_size": "1.9 GB",
         "size_bytes": 2056414720,
         "sha256": "1086ea5d44e9d7b3ee1978ce322c01f96d9c1086bd5e73d89397be7a2af1335a"
-      },
-      {
-        "model_id": "Q4-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q4-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
-        "file_size": "498.1 MB",
-        "size_bytes": 522293024,
-        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
-      },
-      {
-        "model_id": "Q4-LynnStyle/mmproj-Qwen3.8-27B-Q6_K",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q4-LynnStyle/mmproj-Qwen3.8-27B-Q6_K.gguf",
-        "file_size": "589.7 MB",
-        "size_bytes": 618390560,
-        "sha256": "4b83ea6e065484a8188288513fe15d5a862e01fa6d32c83fa66655b1cbfdcb77"
       },
       {
         "model_id": "Q4-LynnStyle/mtp-Qwen3.8-27B-Q4_0",
@@ -51408,20 +51464,6 @@
         "sha256": "1086ea5d44e9d7b3ee1978ce322c01f96d9c1086bd5e73d89397be7a2af1335a"
       },
       {
-        "model_id": "Q5-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q5-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
-        "file_size": "498.1 MB",
-        "size_bytes": 522293024,
-        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
-      },
-      {
-        "model_id": "Q5-LynnStyle/mmproj-Qwen3.8-27B-Q6_K",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q5-LynnStyle/mmproj-Qwen3.8-27B-Q6_K.gguf",
-        "file_size": "589.7 MB",
-        "size_bytes": 618390560,
-        "sha256": "4b83ea6e065484a8188288513fe15d5a862e01fa6d32c83fa66655b1cbfdcb77"
-      },
-      {
         "model_id": "Q5-LynnStyle/mtp-Qwen3.8-27B-Q4_0",
         "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q5-LynnStyle/mtp-Qwen3.8-27B-Q4_0.gguf",
         "file_size": "1.6 GB",
@@ -51455,20 +51497,6 @@
         "file_size": "1.9 GB",
         "size_bytes": 2056414720,
         "sha256": "1086ea5d44e9d7b3ee1978ce322c01f96d9c1086bd5e73d89397be7a2af1335a"
-      },
-      {
-        "model_id": "Q6_K/mmproj-Qwen3.8-27B-Q4_K_M",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q6_K/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
-        "file_size": "498.1 MB",
-        "size_bytes": 522293024,
-        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
-      },
-      {
-        "model_id": "Q6_K/mmproj-Qwen3.8-27B-Q8_0",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q6_K/mmproj-Qwen3.8-27B-Q8_0.gguf",
-        "file_size": "600.1 MB",
-        "size_bytes": 629247008,
-        "sha256": "cae9799dc9196449b0d83f716e64af89d5cf65147510462e5a629a2aa23adb32"
       },
       {
         "model_id": "Q6_K/mtp-Qwen3.8-27B-Q4_0",
@@ -51506,13 +51534,6 @@
         "sha256": "1086ea5d44e9d7b3ee1978ce322c01f96d9c1086bd5e73d89397be7a2af1335a"
       },
       {
-        "model_id": "Q8_0/mmproj-Qwen3.8-27B-Q8_0",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q8_0/mmproj-Qwen3.8-27B-Q8_0.gguf",
-        "file_size": "600.1 MB",
-        "size_bytes": 629247008,
-        "sha256": "cae9799dc9196449b0d83f716e64af89d5cf65147510462e5a629a2aa23adb32"
-      },
-      {
         "model_id": "Q8_0/mtp-Qwen3.8-27B-Q4_0",
         "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q8_0/mtp-Qwen3.8-27B-Q4_0.gguf",
         "file_size": "1.6 GB",
@@ -51527,8 +51548,79 @@
         "sha256": "cbf60a0c48b431bb61f1d49b8948dc88ac29c398d6dbdbbb2e6e89ef77eacc9a"
       }
     ],
-    "num_mmproj": 0,
-    "mmproj_models": [],
+    "num_mmproj": 10,
+    "mmproj_models": [
+      {
+        "model_id": "Q2-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q2-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
+        "file_size": "498.1 MB",
+        "size_bytes": 522293024,
+        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
+      },
+      {
+        "model_id": "Q3-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q3-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
+        "file_size": "498.1 MB",
+        "size_bytes": 522293024,
+        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
+      },
+      {
+        "model_id": "Q3-LynnStyle/mmproj-Qwen3.8-27B-Q6_K",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q3-LynnStyle/mmproj-Qwen3.8-27B-Q6_K.gguf",
+        "file_size": "589.7 MB",
+        "size_bytes": 618390560,
+        "sha256": "4b83ea6e065484a8188288513fe15d5a862e01fa6d32c83fa66655b1cbfdcb77"
+      },
+      {
+        "model_id": "Q4-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q4-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
+        "file_size": "498.1 MB",
+        "size_bytes": 522293024,
+        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
+      },
+      {
+        "model_id": "Q4-LynnStyle/mmproj-Qwen3.8-27B-Q6_K",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q4-LynnStyle/mmproj-Qwen3.8-27B-Q6_K.gguf",
+        "file_size": "589.7 MB",
+        "size_bytes": 618390560,
+        "sha256": "4b83ea6e065484a8188288513fe15d5a862e01fa6d32c83fa66655b1cbfdcb77"
+      },
+      {
+        "model_id": "Q5-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q5-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
+        "file_size": "498.1 MB",
+        "size_bytes": 522293024,
+        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
+      },
+      {
+        "model_id": "Q5-LynnStyle/mmproj-Qwen3.8-27B-Q6_K",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q5-LynnStyle/mmproj-Qwen3.8-27B-Q6_K.gguf",
+        "file_size": "589.7 MB",
+        "size_bytes": 618390560,
+        "sha256": "4b83ea6e065484a8188288513fe15d5a862e01fa6d32c83fa66655b1cbfdcb77"
+      },
+      {
+        "model_id": "Q6_K/mmproj-Qwen3.8-27B-Q4_K_M",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q6_K/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
+        "file_size": "498.1 MB",
+        "size_bytes": 522293024,
+        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
+      },
+      {
+        "model_id": "Q6_K/mmproj-Qwen3.8-27B-Q8_0",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q6_K/mmproj-Qwen3.8-27B-Q8_0.gguf",
+        "file_size": "600.1 MB",
+        "size_bytes": 629247008,
+        "sha256": "cae9799dc9196449b0d83f716e64af89d5cf65147510462e5a629a2aa23adb32"
+      },
+      {
+        "model_id": "Q8_0/mmproj-Qwen3.8-27B-Q8_0",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/Q8_0/mmproj-Qwen3.8-27B-Q8_0.gguf",
+        "file_size": "600.1 MB",
+        "size_bytes": 629247008,
+        "sha256": "cae9799dc9196449b0d83f716e64af89d5cf65147510462e5a629a2aa23adb32"
+      }
+    ],
     "readme": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2-GGUF/resolve/89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5/README.md",
     "description": "",
     "revision": "89ca4ad45e41197dc58e8ddd1ffc8197ebc69bf5"
@@ -52890,7 +52982,7 @@
     "createdAt": "2026-09-20T22:58:54.000Z",
     "pipeline_tag": "image-text-to-text",
     "tools": false,
-    "num_quants": 5,
+    "num_quants": 4,
     "quants": [
       {
         "model_id": "gguf/Gemma-4-12B-IT-Assistant-BF16",
@@ -52919,7 +53011,10 @@
         "file_size": "11.8 GB",
         "size_bytes": 12669646592,
         "sha256": "b710efc4c0d048ee61eed92c5fef5ce323a4d17e7c51f9f0533cc72ae50818ea"
-      },
+      }
+    ],
+    "num_mmproj": 1,
+    "mmproj_models": [
       {
         "model_id": "gguf/mmproj-Winnow-12B",
         "path": "https://huggingface.co/EldanRing/Winnow-12B/resolve/0b5b7f98e718cf0faffd0acea3093b86ebf00b56/gguf/mmproj-Winnow-12B.gguf",
@@ -52928,8 +53023,6 @@
         "sha256": "91f086971e56d7a7d8d39e271873fccdb49541bd259d6e02c401a4f1cb7a219e"
       }
     ],
-    "num_mmproj": 0,
-    "mmproj_models": [],
     "readme": "https://huggingface.co/EldanRing/Winnow-12B/resolve/0b5b7f98e718cf0faffd0acea3093b86ebf00b56/README.md",
     "description": "",
     "revision": "0b5b7f98e718cf0faffd0acea3093b86ebf00b56"
@@ -54530,6 +54623,36 @@
     "readme": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Thinking-GGUF/resolve/20b439426f1e997ba575eaccaf4856ac0f76f5d5/README.md",
     "description": "",
     "revision": "20b439426f1e997ba575eaccaf4856ac0f76f5d5"
+  },
+  {
+    "model_name": "Ternary-Bonsai-2-27B-PTQ1_0-MTP-GGUF",
+    "developer": "sudoingx",
+    "downloads": 47552,
+    "createdAt": "2026-09-20T16:02:10.000Z",
+    "pipeline_tag": "text-generation",
+    "tools": true,
+    "num_quants": 2,
+    "quants": [
+      {
+        "model_id": "Ternary-Bonsai-2-27B-PTQ1_0-mtp-lean",
+        "path": "https://huggingface.co/sudoingx/Ternary-Bonsai-2-27B-PTQ1_0-MTP-GGUF/resolve/0ce9204fcfb581563c8f5c59d2b8767dbd4b72d4/Ternary-Bonsai-2-27B-PTQ1_0-mtp-lean.gguf",
+        "file_size": "5.9 GB",
+        "size_bytes": 6297658848,
+        "sha256": "1e33c571a5ce7a9a3e42474d66192923d5a6d77da7fb3a22986dc809522b5685"
+      },
+      {
+        "model_id": "Ternary-Bonsai-2-27B-PTQ1_0-mtp",
+        "path": "https://huggingface.co/sudoingx/Ternary-Bonsai-2-27B-PTQ1_0-MTP-GGUF/resolve/0ce9204fcfb581563c8f5c59d2b8767dbd4b72d4/Ternary-Bonsai-2-27B-PTQ1_0-mtp.gguf",
+        "file_size": "6.5 GB",
+        "size_bytes": 7012820512,
+        "sha256": "83a396ee218c36e5ed88205eccb940a71549d9a72a3d020cc2713f94a78f70f0"
+      }
+    ],
+    "num_mmproj": 0,
+    "mmproj_models": [],
+    "readme": "https://huggingface.co/sudoingx/Ternary-Bonsai-2-27B-PTQ1_0-MTP-GGUF/resolve/0ce9204fcfb581563c8f5c59d2b8767dbd4b72d4/README.md",
+    "description": "",
+    "revision": "0ce9204fcfb581563c8f5c59d2b8767dbd4b72d4"
   },
   {
     "model_name": "MiniCPM-V-4.7-35B-A3B-gguf",
@@ -60265,7 +60388,7 @@
     "createdAt": "2026-09-03T06:19:07.000Z",
     "pipeline_tag": "text-generation",
     "tools": true,
-    "num_quants": 40,
+    "num_quants": 30,
     "quants": [
       {
         "model_id": "GGUF/Q2-LynnStyle/Qwen3.8-27B-EfficientThink-SimPO-Q2-LynnStyle",
@@ -60287,13 +60410,6 @@
         "file_size": "1.9 GB",
         "size_bytes": 2056414720,
         "sha256": "1086ea5d44e9d7b3ee1978ce322c01f96d9c1086bd5e73d89397be7a2af1335a"
-      },
-      {
-        "model_id": "GGUF/Q2-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q2-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
-        "file_size": "498.1 MB",
-        "size_bytes": 522293024,
-        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
       },
       {
         "model_id": "GGUF/Q2-LynnStyle/mtp-Qwen3.8-27B-Q4_0",
@@ -60331,20 +60447,6 @@
         "sha256": "1086ea5d44e9d7b3ee1978ce322c01f96d9c1086bd5e73d89397be7a2af1335a"
       },
       {
-        "model_id": "GGUF/Q3-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q3-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
-        "file_size": "498.1 MB",
-        "size_bytes": 522293024,
-        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
-      },
-      {
-        "model_id": "GGUF/Q3-LynnStyle/mmproj-Qwen3.8-27B-Q6_K",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q3-LynnStyle/mmproj-Qwen3.8-27B-Q6_K.gguf",
-        "file_size": "589.7 MB",
-        "size_bytes": 618390560,
-        "sha256": "4b83ea6e065484a8188288513fe15d5a862e01fa6d32c83fa66655b1cbfdcb77"
-      },
-      {
         "model_id": "GGUF/Q3-LynnStyle/mtp-Qwen3.8-27B-Q4_0",
         "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q3-LynnStyle/mtp-Qwen3.8-27B-Q4_0.gguf",
         "file_size": "1.6 GB",
@@ -60378,20 +60480,6 @@
         "file_size": "1.9 GB",
         "size_bytes": 2056414720,
         "sha256": "1086ea5d44e9d7b3ee1978ce322c01f96d9c1086bd5e73d89397be7a2af1335a"
-      },
-      {
-        "model_id": "GGUF/Q4-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q4-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
-        "file_size": "498.1 MB",
-        "size_bytes": 522293024,
-        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
-      },
-      {
-        "model_id": "GGUF/Q4-LynnStyle/mmproj-Qwen3.8-27B-Q6_K",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q4-LynnStyle/mmproj-Qwen3.8-27B-Q6_K.gguf",
-        "file_size": "589.7 MB",
-        "size_bytes": 618390560,
-        "sha256": "4b83ea6e065484a8188288513fe15d5a862e01fa6d32c83fa66655b1cbfdcb77"
       },
       {
         "model_id": "GGUF/Q4-LynnStyle/mtp-Qwen3.8-27B-Q4_0",
@@ -60429,20 +60517,6 @@
         "sha256": "1086ea5d44e9d7b3ee1978ce322c01f96d9c1086bd5e73d89397be7a2af1335a"
       },
       {
-        "model_id": "GGUF/Q5-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q5-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
-        "file_size": "498.1 MB",
-        "size_bytes": 522293024,
-        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
-      },
-      {
-        "model_id": "GGUF/Q5-LynnStyle/mmproj-Qwen3.8-27B-Q6_K",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q5-LynnStyle/mmproj-Qwen3.8-27B-Q6_K.gguf",
-        "file_size": "589.7 MB",
-        "size_bytes": 618390560,
-        "sha256": "4b83ea6e065484a8188288513fe15d5a862e01fa6d32c83fa66655b1cbfdcb77"
-      },
-      {
         "model_id": "GGUF/Q5-LynnStyle/mtp-Qwen3.8-27B-Q4_0",
         "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q5-LynnStyle/mtp-Qwen3.8-27B-Q4_0.gguf",
         "file_size": "1.6 GB",
@@ -60476,20 +60550,6 @@
         "file_size": "1.9 GB",
         "size_bytes": 2056414720,
         "sha256": "1086ea5d44e9d7b3ee1978ce322c01f96d9c1086bd5e73d89397be7a2af1335a"
-      },
-      {
-        "model_id": "GGUF/Q6_K/mmproj-Qwen3.8-27B-Q4_K_M",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q6_K/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
-        "file_size": "498.1 MB",
-        "size_bytes": 522293024,
-        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
-      },
-      {
-        "model_id": "GGUF/Q6_K/mmproj-Qwen3.8-27B-Q8_0",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q6_K/mmproj-Qwen3.8-27B-Q8_0.gguf",
-        "file_size": "600.1 MB",
-        "size_bytes": 629247008,
-        "sha256": "cae9799dc9196449b0d83f716e64af89d5cf65147510462e5a629a2aa23adb32"
       },
       {
         "model_id": "GGUF/Q6_K/mtp-Qwen3.8-27B-Q4_0",
@@ -60527,13 +60587,6 @@
         "sha256": "1086ea5d44e9d7b3ee1978ce322c01f96d9c1086bd5e73d89397be7a2af1335a"
       },
       {
-        "model_id": "GGUF/Q8_0/mmproj-Qwen3.8-27B-Q8_0",
-        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q8_0/mmproj-Qwen3.8-27B-Q8_0.gguf",
-        "file_size": "600.1 MB",
-        "size_bytes": 629247008,
-        "sha256": "cae9799dc9196449b0d83f716e64af89d5cf65147510462e5a629a2aa23adb32"
-      },
-      {
         "model_id": "GGUF/Q8_0/mtp-Qwen3.8-27B-Q4_0",
         "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q8_0/mtp-Qwen3.8-27B-Q4_0.gguf",
         "file_size": "1.6 GB",
@@ -60548,8 +60601,79 @@
         "sha256": "cbf60a0c48b431bb61f1d49b8948dc88ac29c398d6dbdbbb2e6e89ef77eacc9a"
       }
     ],
-    "num_mmproj": 0,
-    "mmproj_models": [],
+    "num_mmproj": 10,
+    "mmproj_models": [
+      {
+        "model_id": "GGUF/Q2-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q2-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
+        "file_size": "498.1 MB",
+        "size_bytes": 522293024,
+        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
+      },
+      {
+        "model_id": "GGUF/Q3-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q3-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
+        "file_size": "498.1 MB",
+        "size_bytes": 522293024,
+        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
+      },
+      {
+        "model_id": "GGUF/Q3-LynnStyle/mmproj-Qwen3.8-27B-Q6_K",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q3-LynnStyle/mmproj-Qwen3.8-27B-Q6_K.gguf",
+        "file_size": "589.7 MB",
+        "size_bytes": 618390560,
+        "sha256": "4b83ea6e065484a8188288513fe15d5a862e01fa6d32c83fa66655b1cbfdcb77"
+      },
+      {
+        "model_id": "GGUF/Q4-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q4-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
+        "file_size": "498.1 MB",
+        "size_bytes": 522293024,
+        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
+      },
+      {
+        "model_id": "GGUF/Q4-LynnStyle/mmproj-Qwen3.8-27B-Q6_K",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q4-LynnStyle/mmproj-Qwen3.8-27B-Q6_K.gguf",
+        "file_size": "589.7 MB",
+        "size_bytes": 618390560,
+        "sha256": "4b83ea6e065484a8188288513fe15d5a862e01fa6d32c83fa66655b1cbfdcb77"
+      },
+      {
+        "model_id": "GGUF/Q5-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q5-LynnStyle/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
+        "file_size": "498.1 MB",
+        "size_bytes": 522293024,
+        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
+      },
+      {
+        "model_id": "GGUF/Q5-LynnStyle/mmproj-Qwen3.8-27B-Q6_K",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q5-LynnStyle/mmproj-Qwen3.8-27B-Q6_K.gguf",
+        "file_size": "589.7 MB",
+        "size_bytes": 618390560,
+        "sha256": "4b83ea6e065484a8188288513fe15d5a862e01fa6d32c83fa66655b1cbfdcb77"
+      },
+      {
+        "model_id": "GGUF/Q6_K/mmproj-Qwen3.8-27B-Q4_K_M",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q6_K/mmproj-Qwen3.8-27B-Q4_K_M.gguf",
+        "file_size": "498.1 MB",
+        "size_bytes": 522293024,
+        "sha256": "0d22c439a59fb0ffb784530babc4f03a10581484b7ac68d9a5707fc0d7675d48"
+      },
+      {
+        "model_id": "GGUF/Q6_K/mmproj-Qwen3.8-27B-Q8_0",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q6_K/mmproj-Qwen3.8-27B-Q8_0.gguf",
+        "file_size": "600.1 MB",
+        "size_bytes": 629247008,
+        "sha256": "cae9799dc9196449b0d83f716e64af89d5cf65147510462e5a629a2aa23adb32"
+      },
+      {
+        "model_id": "GGUF/Q8_0/mmproj-Qwen3.8-27B-Q8_0",
+        "path": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/GGUF/Q8_0/mmproj-Qwen3.8-27B-Q8_0.gguf",
+        "file_size": "600.1 MB",
+        "size_bytes": 629247008,
+        "sha256": "cae9799dc9196449b0d83f716e64af89d5cf65147510462e5a629a2aa23adb32"
+      }
+    ],
     "readme": "https://huggingface.co/nerkyor/Qwen3.8-27B-EfficientThink-Uncensored-K3-Opus5-Grok4.6-GPT5.6Sol-SFT-SimPO-DFlash2/resolve/882e1af3b8f5844f3b3163b132e343c06e91908f/README.md",
     "description": "",
     "revision": "882e1af3b8f5844f3b3163b132e343c06e91908f"
@@ -92943,31 +93067,6 @@
     "pipeline_tag": null
   },
   {
-    "model_name": "Ternary-Bonsai-2-27B-PTQ1_0-MTP-GGUF",
-    "developer": "sudoingx",
-    "downloads": 2304,
-    "createdAt": "2026-09-20T16:02:10.000Z",
-    "pipeline_tag": "text-generation",
-    "tools": true,
-    "num_quants": 2,
-    "quants": [
-      {
-        "model_id": "Ternary-Bonsai-2-27B-PTQ1_0-mtp-lean",
-        "path": "https://huggingface.co/sudoingx/Ternary-Bonsai-2-27B-PTQ1_0-MTP-GGUF/resolve/main/Ternary-Bonsai-2-27B-PTQ1_0-mtp-lean.gguf",
-        "file_size": "5.9 GB"
-      },
-      {
-        "model_id": "Ternary-Bonsai-2-27B-PTQ1_0-mtp",
-        "path": "https://huggingface.co/sudoingx/Ternary-Bonsai-2-27B-PTQ1_0-MTP-GGUF/resolve/main/Ternary-Bonsai-2-27B-PTQ1_0-mtp.gguf",
-        "file_size": "6.5 GB"
-      }
-    ],
-    "num_mmproj": 0,
-    "mmproj_models": [],
-    "readme": "https://huggingface.co/sudoingx/Ternary-Bonsai-2-27B-PTQ1_0-MTP-GGUF/resolve/main/README.md",
-    "description": ""
-  },
-  {
     "model_name": "gemma-4-qat-mtp-assistant-heads",
     "developer": "boxwrench",
     "downloads": 2297,
@@ -116410,6 +116509,72 @@
     "readme": "https://huggingface.co/mradermacher/ERNIE-21B-A3B-Claude-4.5-High-OPUS-Thinking-i1-GGUF/resolve/main/README.md",
     "description": "Quantized 64-expert MoE creative writing model with multiple GGUF quantization options.",
     "pipeline_tag": null
+  },
+  {
+    "model_name": "Qwopus3-5-9B-Coder-Flash-GGUF",
+    "developer": "Jackrong",
+    "downloads": 627,
+    "createdAt": "2026-10-02T00:49:42.000Z",
+    "pipeline_tag": "image-text-to-text",
+    "tools": true,
+    "num_quants": 6,
+    "quants": [
+      {
+        "model_id": "Qwopus3-5-9B-Coder-Flash-BF16",
+        "path": "https://huggingface.co/Jackrong/Qwopus3-5-9B-Coder-Flash-GGUF/resolve/2ffa0b43e5c2361a09a7c9f61c4dcfd6b24c8fdb/Qwopus3-5-9B-Coder-Flash-BF16.gguf",
+        "file_size": "17.1 GB",
+        "size_bytes": 18407321536,
+        "sha256": "3bf4bc75f25f61efcb8f17042b75879dd33ec2fc265b95253a9563efaa37f2d2"
+      },
+      {
+        "model_id": "Qwopus3-5-9B-Coder-Flash-Q3_K_M",
+        "path": "https://huggingface.co/Jackrong/Qwopus3-5-9B-Coder-Flash-GGUF/resolve/2ffa0b43e5c2361a09a7c9f61c4dcfd6b24c8fdb/Qwopus3-5-9B-Coder-Flash-Q3_K_M.gguf",
+        "file_size": "4.4 GB",
+        "size_bytes": 4737609664,
+        "sha256": "546df97be10601936d2a2c2b0e76924775e583df48a87eba24e6c1fb5984ab3b"
+      },
+      {
+        "model_id": "Qwopus3-5-9B-Coder-Flash-Q4_K_M",
+        "path": "https://huggingface.co/Jackrong/Qwopus3-5-9B-Coder-Flash-GGUF/resolve/2ffa0b43e5c2361a09a7c9f61c4dcfd6b24c8fdb/Qwopus3-5-9B-Coder-Flash-Q4_K_M.gguf",
+        "file_size": "5.4 GB",
+        "size_bytes": 5780090816,
+        "sha256": "fa195242b35d7ba861060466fd6b091a3ce3c9bc0a8849046ab09968f8e5e87a"
+      },
+      {
+        "model_id": "Qwopus3-5-9B-Coder-Flash-Q5_K_M",
+        "path": "https://huggingface.co/Jackrong/Qwopus3-5-9B-Coder-Flash-GGUF/resolve/2ffa0b43e5c2361a09a7c9f61c4dcfd6b24c8fdb/Qwopus3-5-9B-Coder-Flash-Q5_K_M.gguf",
+        "file_size": "6.2 GB",
+        "size_bytes": 6642544576,
+        "sha256": "6bbd7160cd6e6df431ebec5083c089bd0040a8831b131f3072413fe524bd0610"
+      },
+      {
+        "model_id": "Qwopus3-5-9B-Coder-Flash-Q6_K",
+        "path": "https://huggingface.co/Jackrong/Qwopus3-5-9B-Coder-Flash-GGUF/resolve/2ffa0b43e5c2361a09a7c9f61c4dcfd6b24c8fdb/Qwopus3-5-9B-Coder-Flash-Q6_K.gguf",
+        "file_size": "7.0 GB",
+        "size_bytes": 7558901696,
+        "sha256": "39709dc6a55d1bd593907f63dbcd88ad304ae1ea8169dc3241b1bfe5258c4783"
+      },
+      {
+        "model_id": "Qwopus3-5-9B-Coder-Flash-Q8_0",
+        "path": "https://huggingface.co/Jackrong/Qwopus3-5-9B-Coder-Flash-GGUF/resolve/2ffa0b43e5c2361a09a7c9f61c4dcfd6b24c8fdb/Qwopus3-5-9B-Coder-Flash-Q8_0.gguf",
+        "file_size": "9.1 GB",
+        "size_bytes": 9786060736,
+        "sha256": "b4f0b48dfa8f0642acd4a8e69416bc1d7975d9e1d5338525b6aa4a1c1e633ed3"
+      }
+    ],
+    "num_mmproj": 1,
+    "mmproj_models": [
+      {
+        "model_id": "mmproj-F32",
+        "path": "https://huggingface.co/Jackrong/Qwopus3-5-9B-Coder-Flash-GGUF/resolve/2ffa0b43e5c2361a09a7c9f61c4dcfd6b24c8fdb/mmproj-F32.gguf",
+        "file_size": "1.7 GB",
+        "size_bytes": 1824061856,
+        "sha256": "2ba983507b66b4a0246012c38dd20a0ef57e656f53e37ae59868e23cdbfdfbf6"
+      }
+    ],
+    "readme": "https://huggingface.co/Jackrong/Qwopus3-5-9B-Coder-Flash-GGUF/resolve/2ffa0b43e5c2361a09a7c9f61c4dcfd6b24c8fdb/README.md",
+    "description": "",
+    "revision": "2ffa0b43e5c2361a09a7c9f61c4dcfd6b24c8fdb"
   },
   {
     "model_name": "chromadb-context-1-gguf",
@@ -150533,6 +150698,29 @@
     "readme": "https://huggingface.co/HauhauCS/Qwen3.5-35B-Optimized-HauhauCS-40/resolve/main/README.md",
     "description": "A Qwen 3.5 35B variant with HauhauCS optimization for improved inference efficiency.",
     "pipeline_tag": null
+  },
+  {
+    "model_name": "Qwen3.8-Flash-Next-Turbo-Brilliance-50x-Reasoning-Instruct-GSQ-RCO-GGUF",
+    "developer": "DavidAU",
+    "downloads": 0,
+    "createdAt": "2026-10-13T04:24:27.000Z",
+    "pipeline_tag": "image-text-to-text",
+    "tools": true,
+    "num_quants": 0,
+    "quants": [],
+    "num_mmproj": 1,
+    "mmproj_models": [
+      {
+        "model_id": "mmproj-Qwen3.8-Flash-Next-BF16",
+        "path": "https://huggingface.co/DavidAU/Qwen3.8-Flash-Next-Turbo-Brilliance-50x-Reasoning-Instruct-GSQ-RCO-GGUF/resolve/72033c4bdc0235cc457ad959d188ca8d0fd1cb89/mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+        "file_size": "865.5 MB",
+        "size_bytes": 907543008,
+        "sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0"
+      }
+    ],
+    "readme": "https://huggingface.co/DavidAU/Qwen3.8-Flash-Next-Turbo-Brilliance-50x-Reasoning-Instruct-GSQ-RCO-GGUF/resolve/72033c4bdc0235cc457ad959d188ca8d0fd1cb89/README.md",
+    "description": "",
+    "revision": "72033c4bdc0235cc457ad959d188ca8d0fd1cb89"
   },
   {
     "model_name": "qwen35b-a3b-fable-sft-abliterated",

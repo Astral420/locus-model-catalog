@@ -1,0 +1,8 @@
+Processing leliuga/all-MiniLM-L6-v2-GGUF
+  -> Found 14 quants
+Processing CompendiumLabs/bge-small-en-v1.5-gguf
+  -> Found 4 quants
+Processing nomic-ai/nomic-embed-text-v1.5-GGUF
+  -> Found 14 quants
+
+Updated or Added 3 models; catalog total now 3
