@@ -14,7 +14,13 @@ from unittest.mock import patch, MagicMock
 
 import prepare_catalog as v1
 import catalog_helpers as helpers
-import prepare_catalog_v2 as v2
+
+REV = "a1b2c3d4" * 5  # 40-hex commit sha
+
+
+def lfs(size):
+    """The `lfs` block the Hub returns per file with ?blobs=true."""
+    return {"sha256": "f" * 64, "size": size, "pointerSize": 134}
 
 
 # ---------------------------------------------------------------------------
@@ -24,7 +30,8 @@ import prepare_catalog_v2 as v2
 def gguf_detail():
     """A realistic HF API detail response for a GGUF model."""
     return {
-        "id": "janhq/test-model-gguf",
+        "id": "acme/test-model-gguf",
+        "sha": REV,
         "downloads": 50000,
         "createdAt": "2026-01-15T10:00:00.000Z",
         "library_name": "gguf",
@@ -33,9 +40,9 @@ def gguf_detail():
             "chat_template": "some template for tool calling"
         },
         "siblings": [
-            {"rfilename": "test-model-Q4_K_M.gguf", "size": 2500000000},
-            {"rfilename": "test-model-Q5_K_M.gguf", "size": 3000000000},
-            {"rfilename": "test-model-Q8_0.gguf", "size": 4400000000},
+            {"rfilename": "test-model-Q4_K_M.gguf", "size": 2500000000, "lfs": lfs(2500000000)},
+            {"rfilename": "test-model-Q5_K_M.gguf", "size": 3000000000, "lfs": lfs(3000000000)},
+            {"rfilename": "test-model-Q8_0.gguf", "size": 4400000000, "lfs": lfs(4400000000)},
             {"rfilename": "README.md", "size": 5000},
         ],
     }
@@ -45,15 +52,16 @@ def gguf_detail():
 def gguf_detail_with_mmproj():
     """A GGUF model with mmproj files (vision model)."""
     return {
-        "id": "janhq/test-vl-model-gguf",
+        "id": "acme/test-vl-model-gguf",
+        "sha": REV,
         "downloads": 30000,
         "createdAt": "2026-02-01T10:00:00.000Z",
         "library_name": "gguf",
         "tags": ["image-text-to-text", "gguf"],
         "gguf": {},
         "siblings": [
-            {"rfilename": "test-vl-Q4_K_M.gguf", "size": 2500000000},
-            {"rfilename": "mmproj-test-vl-f16.gguf", "size": 600000000},
+            {"rfilename": "test-vl-Q4_K_M.gguf", "size": 2500000000, "lfs": lfs(2500000000)},
+            {"rfilename": "mmproj-test-vl-f16.gguf", "size": 600000000, "lfs": lfs(600000000)},
             {"rfilename": "README.md", "size": 3000},
         ],
     }
@@ -64,16 +72,17 @@ def gguf_detail_with_multipart():
     """A GGUF model with multipart files that should be skipped."""
     return {
         "id": "someone/big-model-gguf",
+        "sha": REV,
         "downloads": 10000,
         "createdAt": "2026-01-10T10:00:00.000Z",
         "library_name": "gguf",
         "tags": ["text-generation"],
         "gguf": {},
         "siblings": [
-            {"rfilename": "big-model-Q4_K_M.gguf", "size": 2000000000},
-            {"rfilename": "big-model-Q8_0-00001-of-00003.gguf", "size": 5000000000},
-            {"rfilename": "big-model-Q8_0-00002-of-00003.gguf", "size": 5000000000},
-            {"rfilename": "big-model-Q8_0-00003-of-00003.gguf", "size": 5000000000},
+            {"rfilename": "big-model-Q4_K_M.gguf", "size": 2000000000, "lfs": lfs(2000000000)},
+            {"rfilename": "big-model-Q8_0-00001-of-00003.gguf", "size": 5000000000, "lfs": lfs(5000000000)},
+            {"rfilename": "big-model-Q8_0-00002-of-00003.gguf", "size": 5000000000, "lfs": lfs(5000000000)},
+            {"rfilename": "big-model-Q8_0-00003-of-00003.gguf", "size": 5000000000, "lfs": lfs(5000000000)},
             {"rfilename": "README.md", "size": 2000},
         ],
     }
@@ -84,14 +93,15 @@ def gguf_detail_only_excluded():
     """A GGUF model with only embedding/ocr/etc files (should be skipped)."""
     return {
         "id": "someone/embedding-model-gguf",
+        "sha": REV,
         "downloads": 5000,
         "createdAt": "2026-01-05T10:00:00.000Z",
         "library_name": "gguf",
         "tags": ["text-generation"],
         "gguf": {},
         "siblings": [
-            {"rfilename": "embedding-model-f16.gguf", "size": 1000000000},
-            {"rfilename": "reranker-model-f16.gguf", "size": 500000000},
+            {"rfilename": "embedding-model-f16.gguf", "size": 1000000000, "lfs": lfs(1000000000)},
+            {"rfilename": "reranker-model-f16.gguf", "size": 500000000, "lfs": lfs(500000000)},
         ],
     }
 
@@ -101,6 +111,7 @@ def mlx_detail():
     """A realistic HF API detail response for an MLX model."""
     return {
         "id": "mlx-community/test-model-4bit",
+        "sha": REV,
         "downloads": 20000,
         "createdAt": "2026-01-20T10:00:00.000Z",
         "library_name": "mlx",
@@ -118,7 +129,8 @@ def mlx_detail():
 def gguf_detail_no_tools():
     """A GGUF model without tool support."""
     return {
-        "id": "janhq/simple-model-gguf",
+        "id": "acme/simple-model-gguf",
+        "sha": REV,
         "downloads": 15000,
         "createdAt": "2026-01-12T10:00:00.000Z",
         "library_name": "gguf",
@@ -127,7 +139,7 @@ def gguf_detail_no_tools():
             "chat_template": "basic chat template without tools"
         },
         "siblings": [
-            {"rfilename": "simple-model-Q4_K_M.gguf", "size": 2000000000},
+            {"rfilename": "simple-model-Q4_K_M.gguf", "size": 2000000000, "lfs": lfs(2000000000)},
             {"rfilename": "README.md", "size": 2000},
         ],
     }
@@ -146,10 +158,10 @@ class TestProcessGgufModel:
         mock_resp.raise_for_status = MagicMock()
         mock_get.return_value = mock_resp
 
-        result = helpers.process_gguf_model("janhq/test-model-gguf", gguf_detail)
+        result = helpers.process_gguf_model("acme/test-model-gguf", gguf_detail)
         assert result is not None
         assert result["model_name"] == "test-model-gguf"
-        assert result["developer"] == "janhq"
+        assert result["developer"] == "acme"
         assert result["downloads"] == 50000
         assert result["library_name"] == "gguf"
         assert result["tools"] is True  # "for tool" in chat_template
@@ -165,7 +177,7 @@ class TestProcessGgufModel:
         mock_resp.raise_for_status = MagicMock()
         mock_get.return_value = mock_resp
 
-        result = helpers.process_gguf_model("janhq/test-vl-model-gguf", gguf_detail_with_mmproj)
+        result = helpers.process_gguf_model("acme/test-vl-model-gguf", gguf_detail_with_mmproj)
         assert result is not None
         assert result["num_quants"] == 1
         assert result["num_mmproj"] == 1
@@ -200,7 +212,7 @@ class TestProcessGgufModel:
         mock_resp.raise_for_status = MagicMock()
         mock_get.return_value = mock_resp
 
-        result = helpers.process_gguf_model("janhq/simple-model-gguf", gguf_detail_no_tools)
+        result = helpers.process_gguf_model("acme/simple-model-gguf", gguf_detail_no_tools)
         assert result is not None
         assert result["tools"] is False
 
@@ -219,7 +231,7 @@ class TestProcessGgufModel:
         mock_get.return_value = mock_resp
 
         existing = {"description": "Existing desc", "createdAt": "2025-01-01T00:00:00.000Z"}
-        result = helpers.process_gguf_model("janhq/test-model-gguf", gguf_detail, existing)
+        result = helpers.process_gguf_model("acme/test-model-gguf", gguf_detail, existing)
         assert result is not None
         assert result["description"] == "Existing desc"
 
@@ -230,7 +242,7 @@ class TestProcessGgufModel:
         mock_resp.raise_for_status = MagicMock()
         mock_get.return_value = mock_resp
 
-        result = helpers.process_gguf_model("janhq/test-model-gguf", gguf_detail)
+        result = helpers.process_gguf_model("acme/test-model-gguf", gguf_detail)
         assert result is not None
         for quant in result["quants"]:
             assert "GB" in quant["file_size"] or "MB" in quant["file_size"]
@@ -242,9 +254,9 @@ class TestProcessGgufModel:
         mock_resp.raise_for_status = MagicMock()
         mock_get.return_value = mock_resp
 
-        result = helpers.process_gguf_model("janhq/test-model-gguf", gguf_detail)
+        result = helpers.process_gguf_model("acme/test-model-gguf", gguf_detail)
         for quant in result["quants"]:
-            assert quant["path"].startswith("https://huggingface.co/janhq/test-model-gguf/resolve/main/")
+            assert quant["path"].startswith("https://huggingface.co/acme/test-model-gguf/resolve/main/")
             assert quant["path"].endswith(".gguf")
 
 
@@ -316,10 +328,10 @@ class TestProcessModelDetailsV1:
         mock_resp.raise_for_status = MagicMock()
         mock_get.return_value = mock_resp
 
-        result = v1.process_model_details("janhq/test-model-gguf", gguf_detail)
+        result = v1.process_model_details("acme/test-model-gguf", gguf_detail)
         assert result is not None
         assert result["model_name"] == "test-model-gguf"
-        assert result["developer"] == "janhq"
+        assert result["developer"] == "acme"
         assert result["downloads"] == 50000
         assert result["tools"] is True
         assert result["num_quants"] == 3
@@ -332,7 +344,7 @@ class TestProcessModelDetailsV1:
         mock_resp.raise_for_status = MagicMock()
         mock_get.return_value = mock_resp
 
-        result = v1.process_model_details("janhq/test-vl-model-gguf", gguf_detail_with_mmproj)
+        result = v1.process_model_details("acme/test-vl-model-gguf", gguf_detail_with_mmproj)
         assert result is not None
         assert result["num_quants"] == 1
         assert result["num_mmproj"] == 1
@@ -355,53 +367,13 @@ class TestProcessModelDetailsV1:
         mock_get.return_value = mock_resp
 
         existing = {"description": "Existing description", "createdAt": "2025-01-01T00:00:00.000Z"}
-        result = v1.process_model_details("janhq/test-model-gguf", gguf_detail, existing)
+        result = v1.process_model_details("acme/test-model-gguf", gguf_detail, existing)
         assert result is not None
         assert result["description"] == "Existing description"
 
 
 # ---------------------------------------------------------------------------
 # remove_duplicates (v2)
-# ---------------------------------------------------------------------------
-class TestRemoveDuplicatesV2:
-
-    def test_no_duplicates(self):
-        catalog = [
-            {"model_name": "model-a", "developer": "dev1", "downloads": 100, "library_name": "gguf"},
-            {"model_name": "model-b", "developer": "dev2", "downloads": 200, "library_name": "gguf"},
-        ]
-        result = v2.remove_duplicates(catalog)
-        assert len(result) == 2
-
-    def test_duplicate_keeps_pinned(self):
-        catalog = [
-            {"model_name": "Jan-v3-4B-base-instruct-gguf", "developer": "janhq", "downloads": 100, "library_name": "gguf"},
-            {"model_name": "Jan-v3-4B-base-instruct-gguf", "developer": "someone", "downloads": 99999, "library_name": "gguf"},
-        ]
-        result = v2.remove_duplicates(catalog)
-        assert len(result) == 1
-        assert result[0]["developer"] == "janhq"
-
-    def test_duplicate_keeps_higher_downloads(self):
-        catalog = [
-            {"model_name": "some-model", "developer": "dev1", "downloads": 100, "library_name": "gguf"},
-            {"model_name": "some-model", "developer": "dev2", "downloads": 500, "library_name": "gguf"},
-        ]
-        result = v2.remove_duplicates(catalog)
-        assert len(result) == 1
-        assert result[0]["downloads"] == 500
-
-    def test_keeps_both_gguf_and_mlx(self):
-        catalog = [
-            {"model_name": "some-model", "developer": "dev1", "downloads": 100, "library_name": "gguf"},
-            {"model_name": "some-model", "developer": "dev2", "downloads": 200, "library_name": "mlx"},
-        ]
-        result = v2.remove_duplicates(catalog)
-        assert len(result) == 2
-
-
-# ---------------------------------------------------------------------------
-# remove_duplicates_and_multipart (v1)
 # ---------------------------------------------------------------------------
 class TestRemoveDuplicatesAndMultipartV1:
 
@@ -446,14 +418,14 @@ class TestRemoveDuplicatesAndMultipartV1:
     def test_duplicate_keeps_pinned(self):
         catalog = [
             {
-                "model_name": "Jan-v3-4B-base-instruct-gguf",
-                "developer": "janhq",
+                "model_name": "gemma-3-4b-it-GGUF",
+                "developer": "unsloth",
                 "downloads": 100,
                 "quants": [{"path": "q.gguf", "model_id": "q", "file_size": "1 GB"}],
                 "mmproj_models": [],
             },
             {
-                "model_name": "Jan-v3-4B-base-instruct-gguf",
+                "model_name": "gemma-3-4b-it-GGUF",
                 "developer": "someone",
                 "downloads": 99999,
                 "quants": [{"path": "q.gguf", "model_id": "q", "file_size": "1 GB"}],
@@ -462,7 +434,7 @@ class TestRemoveDuplicatesAndMultipartV1:
         ]
         result = v1.remove_duplicates_and_multipart(catalog)
         assert len(result) == 1
-        assert result[0]["developer"] == "janhq"
+        assert result[0]["developer"] == "unsloth"
 
 
 # ---------------------------------------------------------------------------
@@ -486,7 +458,7 @@ class TestOutputSchema:
     V1_REQUIRED_KEYS = {
         "model_name", "developer", "downloads", "createdAt",
         "tools", "num_quants", "quants",
-        "num_mmproj", "mmproj_models", "readme", "description",
+        "num_mmproj", "mmproj_models", "readme", "description", "revision",
     }
 
     @patch("catalog_helpers.requests.get")
@@ -496,7 +468,7 @@ class TestOutputSchema:
         mock_resp.raise_for_status = MagicMock()
         mock_get.return_value = mock_resp
 
-        result = helpers.process_gguf_model("janhq/test-model-gguf", gguf_detail)
+        result = helpers.process_gguf_model("acme/test-model-gguf", gguf_detail)
         assert result is not None
         missing = self.GGUF_REQUIRED_KEYS - set(result.keys())
         assert not missing, f"Missing keys in GGUF output: {missing}"
@@ -520,7 +492,7 @@ class TestOutputSchema:
         mock_resp.raise_for_status = MagicMock()
         mock_get.return_value = mock_resp
 
-        result = v1.process_model_details("janhq/test-model-gguf", gguf_detail)
+        result = v1.process_model_details("acme/test-model-gguf", gguf_detail)
         assert result is not None
         missing = self.V1_REQUIRED_KEYS - set(result.keys())
         assert not missing, f"Missing keys in v1 output: {missing}"

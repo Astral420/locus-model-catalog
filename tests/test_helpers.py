@@ -2,10 +2,10 @@
 Tests for shared helper functions across all catalog scripts.
 
 Tests cover:
-- catalog_helpers.py (the shared module used by v2 and fetch)
+- catalog_helpers.py (the shared module used by the catalog scripts)
 - prepare_catalog.py (v1, still standalone)
 
-When v2/fetch import from catalog_helpers, we verify them through
+When the catalog scripts import from catalog_helpers, we verify them through
 catalog_helpers directly AND through the re-exported references.
 """
 
@@ -175,30 +175,3 @@ class TestDetectLibraryName:
     def test_transformers_fallback(self):
         detail = {"library_name": "transformers", "tags": [], "siblings": []}
         assert helpers.detect_library_name(detail) == "transformers"
-
-
-# ---------------------------------------------------------------------------
-# Verify v2 and fetch use the same functions from catalog_helpers
-# ---------------------------------------------------------------------------
-class TestSharedImports:
-    """Verify that v2 and fetch actually use the catalog_helpers functions."""
-
-    def test_fetch_uses_helpers_process_gguf(self):
-        import fetch_newest_jan_model as fetch
-        assert fetch.process_gguf_model is helpers.process_gguf_model
-
-    def test_fetch_uses_helpers_process_mlx(self):
-        import fetch_newest_jan_model as fetch
-        assert fetch.process_mlx_model is helpers.process_mlx_model
-
-    def test_fetch_uses_helpers_detect_library(self):
-        import fetch_newest_jan_model as fetch
-        assert fetch.detect_library_name is helpers.detect_library_name
-
-    def test_v2_uses_helpers_process_gguf(self):
-        import prepare_catalog_v2 as v2
-        assert v2.process_gguf_model is helpers.process_gguf_model
-
-    def test_v2_uses_helpers_process_mlx(self):
-        import prepare_catalog_v2 as v2
-        assert v2.process_mlx_model is helpers.process_mlx_model
