@@ -114,6 +114,16 @@ HF_TOKEN = os.getenv("HF_TOKEN")
 HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"} if HF_TOKEN else {}
 
 
+def missing_locus_keys(entry: dict) -> list:
+    """Locus additions an existing entry still lacks; a non-empty result means "re-fetch it"."""
+    missing = []
+    if not entry.get("revision"):
+        missing.append("revision")
+    if any("sha256" not in q for q in entry.get("quants", [])):
+        missing.append("quants.sha256")
+    return missing
+
+
 def summarize_readme_one_liner(text: str) -> str:
     global client
     if client is None:
@@ -585,8 +595,7 @@ def get_gguf_model_catalog():
                     if key not in existing_entry:
                         missing_keys.append(key)
                 # Entries written before sha256 support get re-fetched once.
-                if any("sha256" not in q for q in existing_entry.get("quants", [])):
-                    missing_keys.append("quants.sha256")
+                missing_keys.extend(k for k in missing_locus_keys(existing_entry) if k not in missing_keys)
 
                 if missing_keys:
                     needs_processing = True
@@ -682,6 +691,8 @@ def get_gguf_model_catalog():
         for key in expected_keys:
             if key not in existing_entry:
                 missing_keys.append(key)
+        # Entries written before sha256 support get re-fetched once (this pass holds most of them).
+        missing_keys.extend(k for k in missing_locus_keys(existing_entry) if k not in missing_keys)
 
         if not missing_keys:
             print(f"  -> No missing keys, skipping")

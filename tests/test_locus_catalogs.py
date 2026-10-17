@@ -200,3 +200,20 @@ def test_shipped_embedding_config_is_well_formed():
         assert "query_prefix" in m and "document_prefix" in m
     nomic = next(m for m in emb.EMBEDDING_MODELS if "nomic" in m["repos"][0])
     assert nomic["document_prefix"] == "search_document: "
+
+
+# --- backfill of entries written before sha256 support --------------------------
+
+def test_missing_locus_keys_flags_legacy_entries_for_refetch():
+    legacy = {"model_name": "m", "quants": [{"model_id": "m-Q4_K_M", "path": "p", "file_size": "1 GB"}]}
+    assert llm.missing_locus_keys(legacy) == ["revision", "quants.sha256"]
+    done = {"revision": REV, "quants": [{"model_id": "m", "path": "p", "file_size": "1 GB", "size_bytes": 1, "sha256": "f" * 64}]}
+    assert llm.missing_locus_keys(done) == []
+    assert llm.missing_locus_keys({"revision": REV, "quants": []}) == []
+
+
+def test_both_passes_use_the_locus_completeness_check():
+    """Regression: Pass 2 once skipped every legacy entry because only Pass 1 had the check."""
+    import inspect
+    source = inspect.getsource(llm)
+    assert source.count("missing_locus_keys(existing_entry)") == 2
