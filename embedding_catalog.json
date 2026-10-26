@@ -2,7 +2,7 @@
   {
     "model_name": "all-MiniLM-L6-v2-GGUF",
     "developer": "leliuga",
-    "downloads": 186373,
+    "downloads": 185617,
     "createdAt": "2024-03-15T12:02:17.000Z",
     "pipeline_tag": "sentence-similarity",
     "num_quants": 14,
@@ -119,7 +119,7 @@
   {
     "model_name": "bge-small-en-v1.5-gguf",
     "developer": "CompendiumLabs",
-    "downloads": 62648,
+    "downloads": 68867,
     "createdAt": "2024-02-17T21:43:14.000Z",
     "pipeline_tag": null,
     "num_quants": 4,
@@ -166,7 +166,7 @@
   {
     "model_name": "nomic-embed-text-v1.5-GGUF",
     "developer": "nomic-ai",
-    "downloads": 528994,
+    "downloads": 584474,
     "createdAt": "2024-02-14T21:55:09.000Z",
     "pipeline_tag": "sentence-similarity",
     "num_quants": 14,
